@@ -154,3 +154,5 @@ function o() {
 function tree_better() {
 	tree -aC -I '.git|node_modules' --dirsfirst "$@" | less -FRNX;
 }
+
+echo "Functions loaded"
