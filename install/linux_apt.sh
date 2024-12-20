@@ -28,6 +28,8 @@ sudo apt-get install zopfli
 sudo apt-get install zsh
 sudo apt-get install cmake
 sudo apt-get install protobuf-compiler
+sudo apt-get install build-essential
+sudo apt-get install libwayland-dev libxkbcommon-dev xorg-dev
 sudo apt-get install tmux
 sudo snap install zig --classic --beta
 
