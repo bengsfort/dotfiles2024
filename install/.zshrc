@@ -74,7 +74,7 @@ plugins=(git golang docker bgnotify buf deno gpg-agent ssh-agent npm nvm yarn)
 
 # Setup ssh
 zstyle :omz:plugins:ssh-agent agent-forwarding yes
-zstyle :omz:plugins:ssh-agent identities id_rsa
+zstyle :omz:plugins:ssh-agent identities id_rsa id_ed25519
 
 
 source $ZSH/oh-my-zsh.sh

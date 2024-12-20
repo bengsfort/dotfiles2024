@@ -1,10 +1,30 @@
 #!/usr/bin/env bash
 
-# Homebrew ===================================================
-#
-echo "Installing homebrew and formulae..."
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-source ./install/homebrew.sh
+if [ "$(uname)" == "Darwin" ]; then
+
+	echo "Detected macos"
+	
+	# Homebrew ===================================================
+	#
+	echo "Installing homebrew and formulae..."
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	source ./install/homebrew.sh
+	
+elif [[ "$(uname)" == Linux* ]]; then
+	
+	echo "Detected linux"
+
+	# Apt ========================================================
+	#
+	echo "Installing packages via apt"
+	source ./install/linux_apt.sh
+
+else
+
+	#TODO: Windows
+	echo "Sry not supported yet"
+
+fi
 
 # Install oh my zsh ==========================================
 #
